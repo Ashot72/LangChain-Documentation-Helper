@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>REST API Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <style>
+  
+    input {
+        margin: 0.4rem;
+    }
+
+    input[type=text] {
+        padding: 12px;
+        width: 500px;;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .header {
+      text-align: center;
+      font-size: 24px;
+    }
+
+    #response {
+      width: 500px;
+      margin: 7px;
+      line-height: 23px;
+      background-color: #fbfbfb;
+      border-radius: 14px;
+      padding: 13px;
+    }
+
+    .title {
+      font-size: 18px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <div class="header">Document Helper</div>
+      <div id="wait"></div>
+      <div>
+        <input id="question" type="text" placeholder="Ask a question (hit Enter)" />
+      </div>
+
+      <div>
+        <input id="sourceDoc" type="checkbox" name="sourceDoc">
+        <label for="sourceDoc">Include Source Document</label>
+      </div>
+      <div id="response">
+       
+      </div>
+    </div>
+  </div>
+ 
+  <script>
+    $(document).ready(function() {
+
+      function getData(data) {
+        $("#wait").text("Wait...")
+
+        console.log(data)
+        $.ajax({
+          type: 'POST',
+          url: '/api/data',
+          data,
+          success: function(response) {
+            $('#response').append(`
+                <div class="title"><b>${$("#question").val()}</b></div>
+                <div>${response.data.text}</div>`
+            );
+
+            const sourceDoc = response.data.sourceDocuments
+            if(sourceDoc) {              
+              $('#response').append(
+                    `<div class="title"><b>Source</b></div>`
+                )
+
+              sourceDoc.forEach(doc => {
+                const filename = doc.metadata.filename
+                $('#response').append(`
+                  <div style="margin-bottom: 7px">
+                    <div>${doc.pageContent}</div>
+                    <div><a href="/files/${filename}" target="_blank">${filename}</a></div>
+                  </div>
+                `)
+              });
+            }
+
+            $('#response').append("<hr />")
+            $("#question").val("")
+            $("#wait").text("")
+          },
+          error: function(xhr, status, error) {
+            $("#wait").text("")
+            console.error(error);
+            alert(error.message || error)
+          }
+        });
+      }
+
+      $("#question").keyup(function (e) {
+        if (e.which == 13) {
+          const question = $("#question").val()      
+          if(!question) {
+            alert("Please ask a question.")
+            return
+          }
+
+          const data = { question, source: $("#sourceDoc").is(':checked') ? true: false }  
+          getData(data)
+        }
+      });
+    });
+  </script>
+</body>
+</html>

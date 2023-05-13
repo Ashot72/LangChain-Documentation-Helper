@@ -1,0 +1,884 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:18.0pt;line-height:107%'>LangChain Documentation Helper</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:18.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>GitHub
+Repository: <a href="https://github.com/Ashot72/LangChain-Documentation-Helper"
+target="_blank">https://github.com/Ashot72/LangChain-Documentation-Helper</a></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Video link: <a
+href="https://youtu.be/c9ujzXuMx9Y" target="_blank">https://youtu.be/c9ujzXuMx9Y</a></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>What is
+LangChain? <a href="https://js.langchain.com/docs/" target="_blank">https://js.langchain.com/docs/</a></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>LangChain is
+de facto go to framework for building LLM (Large Language Model) based
+applications. It gains massive popularity lately for developers wanting to get
+into</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>AI (Artificial
+Intelligence) and to build I based applications. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>LangChain
+has a number of core concepts. Let</span><span style='color:black'>'</span></span><span
+style='font-size:12.0pt;line-height:107%'>s go through them briefly.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>Components
+and Chains</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>In
+LangChain, components are modular building blocks that can be combined to
+create powerful applications. A chain is a sequence of components (or other
+chains) put together to accomplish a specific task.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>Prompt
+Templates and Values</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>A Prompt
+Template is responsible for creating a PromptValue, which is what</span><span
+style='color:black'>'</span></span><span style='font-size:12.0pt;line-height:
+107%'>s eventually passed to the language model. Prompt Templates help convert
+user input and other dynamic information</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>into a
+format suitable for the language model.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>Example
+Selectors</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Example
+Selectors are useful when you want to include examples in a prompt dynamically.
+They take user input and return a list of examples to use in the prompt, making
+it more powerful and context-specific.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>Output
+Parsers</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Output
+Parsers are responsible for structuring language model responses into a more
+usable format. They implement two main methods: one for providing formatting
+instructions and another for parsing</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>the language
+model</span><span style='color:black'>'</span></span><span style='font-size:
+12.0pt;line-height:107%'>s response into a structured format.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>Indexes
+and Retrievers</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Indexes are
+a way to organize documents to make it easier for language models to interact
+with them. Retrievers are interfaces for fetching relevant documents and
+combining them with language models. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>LangChain
+provides tools and functionality for working with different types of indexes
+and retrievers, like vector databases and text splitters.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>Chat
+message History</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>LangChain
+primarily interacts with language models through a chat interface. The
+ChatMessageHistory class is responsible for remembering all previous chat
+interactions, which can then be passed</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>back to the
+model, summarized, or combined in other ways. This helps maintain context and
+improves the model</span><span style='color:black'>'</span></span><span
+style='font-size:12.0pt;line-height:107%'>s understanding of the conversation.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>Agents
+and Toolkits</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Agents are
+entities that drive decision-making in LangChain. They have access to a suite
+of tools and can decide which tool to call based on user input. Toolkits are
+sets of tools that, when used</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>together,
+can accomplish a specific task. The Agent Executor is responsible for running
+agents with the appropriate tools.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%'>Memory</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>LangChain
+has a standard interface for memory, which helps maintain state between chain
+or agent calls. It also offers a range of memory implementations and examples
+of chains or agents that use memory.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>LangChain is
+super powerful because it helps us to interact with a lot of third-party apps.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1081 height=496
+src="doc_files/image001.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 1</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>It implements
+a lot of wrappers around those third parties. That makes is easy to connect to
+them and retrieve data from them that we can process with our LLM. This data
+comes</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>in the form
+of documents. That is the terminology in long chain and a document is simply something
+that holds text. If we have a PowerPoint representation, PDF files, images they
+</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>are all
+represented as a text. Document Loader class is the abstraction that is going
+to help us use this text data. We are going to load the data into documents and
+work with documents</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>and send
+them to LLM. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1021 height=610
+src="doc_files/image002.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 2</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>When we work
+with LLM we are dealing with limited number of tokens. It is a common issue.
+There are couple of ways of dealing with this, and we will use Text Splitters.
+Basically, when we want</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>to deal with
+long pieces of text, it is necessary to split it up to chunks. It may sound
+simple to chunk it up, but there is a lot of different files and there are lot
+of different approaches that we can keep </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>everything
+semantically related. A text splitter will help us split the text into chunks
+and if we want to comprise it later, it will help us to reassemble it together.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1049 height=616
+src="doc_files/image003.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 3</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>For example,
+let</span><span style='color:black'>'</span></span><span style='font-size:12.0pt;
+line-height:107%'>s say it is a book and we want to ask questions about this
+book and the file is too big. We will hit the token limit because there are way
+more than 4K tokens in a book. Let</span><span style='color:black'>'</span></span><span
+style='font-size:12.0pt;line-height:107%'>s say </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>that the questions
+that we want to answer resides in a specific part in the book or over a couple
+of parts and in very specific places. So, even if we split up the book into
+lots of chunks and take one </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>chunk or two
+or three chunks together and send them as a context to LLM to answer the
+question, we will make a lot of redundant API calls because the information for
+our answer is only in specific kind</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>of chunks.
+If we have five chunks it is OK, but what about 1 million chunks? If we have 1 million
+chunks, we will make a lot of redundant API calls, which will cost as a lot of
+money.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=941 height=611
+src="doc_files/image004.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 4</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>So, what if
+there was a way to get with some kind of magic, the relevant chunks that we
+need that contain the answer or have a high probability of containing the
+answer and only </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>sending
+those chunks to LLM? In that way we only make a couple of API calls or even one
+and we can save a lot of money and get response a lot faster and not doing any
+redundant work. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>If that is
+possible to get those relevant chunks, then that would be amazing. It will save
+a lot of time, effort, resources and money. It turns out that there is a way to
+do it and it is super cool and interesting.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt;line-height:107%'>Embeddings</span></i></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Let</span><span
+style='color:black'>'</span></span><span style='font-size:12.0pt;line-height:
+107%'>s talk about embeddings.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1052 height=534
+src="doc_files/image005.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 5</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Text
+embedding is a classic technique and super useful in the natural language
+processing world. The idea is to create a vector space from the text such as
+the distance between the </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>vectors int
+the space has a certain meaning. But what is a vector?</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=680 height=543
+src="doc_files/image006.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 6</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>A vector is
+simply a sequence of numbers and what is cool about a vector is that it can
+represent a more complex object like words, sentences, images, audio files in a
+high continues high dimensional </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>space called
+an embedding.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1056 height=548 id="Picture 7"
+src="doc_files/image007.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 7</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Embedding
+Model.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1107 height=563
+src="doc_files/image008.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 8</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Vectors with
+similar semantic meanings are very close together. In the picture we have three
+sentences.  In well-defined embedding the vectors representing those sentences
+will be close </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>together in
+the vector space or embedding space. It even does not matter that those
+sentences are even not in the same language, because the semantic meaning here
+is pretty much the same. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>How
+calculate the distance between the vectors?  </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>When working
+with embeddings, two common methods for measuring similarity or distance
+between vectors are <i>cosine similarity</i> and <i>Euclidean distance</i>.
+Here</span><span style='color:black'>'</span></span><span style='font-size:
+12.0pt;line-height:107%'>s an explanation of each approach:</span></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt;line-height:107%'>Cosine
+similarity:</span></i><span style='font-size:12.0pt;line-height:107%'> Cosine
+similarity measures the similarity between two vectors by calculating the
+cosine of the angle between them. It is based on the direction rather than the
+magnitude of the vectors. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Cosine
+similarity ranges from -1 to 1, with 1 indicating that the vectors are
+identical, 0 indicating no similarity, and -1 indicating they are diametrically
+opposed. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Cosine
+similarity is often used when comparing the semantic similarity between vectors
+because it focuses on the orientation of the vectors in the vector space.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt;line-height:107%'>Euclidean
+distance:</span></i><span style='font-size:12.0pt;line-height:107%'> Euclidean
+distance calculates the straight-line distance between two vectors in the
+vector space. It measures the overall dissimilarity or distance between the
+vectors. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Euclidean
+distance is calculated as the square root of the sum of the squared differences
+between corresponding elements of the vectors. Euclidean distance ranges from 0
+to positive infinity, </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>with 0
+indicating that the vectors are identical, and higher values indicating greater
+dissimilarity. Euclidean distance is commonly used when comparing the overall
+similarity or dissimilarity between vectors.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1061 height=644
+src="doc_files/image009.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 9</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Let</span><span
+style='color:black'>'</span></span><span style='font-size:12.0pt;line-height:
+107%'>s say that in the vector space, the query that we ask the LLM can be represented
+by the orange vector that you see in the square shape. If there is a way to
+find its closest neighbors, </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>its closest
+vectors that have the least amount of distance to it, then they would provide
+some very good context. If those vectors represent something that its information
+or data source etc. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>then we can
+take it, send it as the context with the query to the LLM. So, our prompt will
+contain our query, plus the context information and tell the LLM to use that context
+in order to </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>answer the
+query.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1012 height=385
+src="doc_files/image010.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 10</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>These
+relevant chunks we talked about in the Vector database is a database that is
+saving those embeddings, those vectors and is able to provide</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>us with no
+time the closest vectors to the vector we want. It takes embeddings and it
+simply persist them and makes it easy for us to use them later.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Now, let</span><span
+style='color:black'>'</span></span><span style='font-size:12.0pt;line-height:
+107%'>s consider the following example which is very close to our app.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=435 height=576
+src="doc_files/image011.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 11</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>We have the
+huge file representing a book. The file weights a lot of gigabytes and it is
+very large. We can split it into chunks and LangChain Is helping us to do it
+very easily. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>So, we took
+the huge file or a couple of files or a couple of gigs and split it into
+thousands or millions of chunks of texts.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=910 height=523 id="Picture 12"
+src="doc_files/image012.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 12</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>We can take
+all of these chunks and embed them using an embedding model and turn them into
+a vector that each vector represents the chunk. Each vector is going to be some
+</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>numbers
+which is going to represent that given chunk that was embedded.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=941 height=521 id="Picture 13"
+src="doc_files/image013.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 13</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Now, we can
+take those embeddings and save them into a vector database like Pinecone, for
+example. If we want to ask a question about the book we can take that question
+as the query, </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>embed it
+into a vector, place it into the vector space where all the embeddings (chunks)
+of the book exist.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'> </span></p>
+
+<p class=MsoNormal><img border=0 width=998 height=581
+src="doc_files/image014.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 14</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Now, we can
+calculate what are the closest vectors to the query vector that we embedded and
+those vectors are semantically close to our query vector, and that is what is
+representing </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>those
+relevant chunks we talked about. We can simply send this context of the
+relevant chunks with our query in our prompt.  We will send it to the LLM then
+will say, hey, <i>what did John do to Alice in the book?</i>  </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Then we will
+send it with the context, the specific chunks, that have this answer and information.
+LLM will easily be able to answer this question.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Let</span><span
+style='color:black'>'</span></span><span style='font-size:12.0pt;line-height:
+107%'>s go through our app.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1046 height=654 id="Picture 1"
+src="doc_files/image015.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 15</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>We have different
+files in data folder and what we are going to do is to extract text from raw
+documents to use it in our application.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1023 height=546 id="Picture 2"
+src="doc_files/image016.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 16</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>We use
+Unstructured Python package that we can use in our Node.js application. You can
+see it supports different file formats. For our app I use txt, pdf and HTML
+formats. We are going to chunk them up,</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>embed them
+and turn them into a vector and put it into a vector store.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1185 height=353 id="Picture 3"
+src="doc_files/image017.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 17</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>In the first
+step we load data using UnstructuredDirectoryLoader pointing data folder. We
+load and split it using RecursiveDirectoryLoader.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1172 height=434 id="Picture 4"
+src="doc_files/image018.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 18</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>This is a LangChain
+UnstructuredDirectoryLoader.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1218 height=504 id="Picture 5"
+src="doc_files/image019.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 19</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>We have abstract
+Text Splitter and its four implementations.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1233 height=301 id="Picture 6"
+src="doc_files/image020.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 20</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>RecursiveCharacterTextSplitter
+splits documents by different characters which will try to keep all the
+semantically relevant content in the same place.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=936 height=805 id="Picture 8"
+src="doc_files/image021.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 21</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Here is an
+example of RecursiveCharacterTextSplitter. You can see that in the chunk size
+is 10 and overlap is 1. You see that have 4 g letter gggg in the content but in
+the output, we have 5 g letter ggggg.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>When the
+chunk size is more than 10 (no splitting by different characters Figure 6) then
+the last letter (as chunkOverlap is 1) is also added to the next chunk. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=974 height=755 id="Picture 9"
+src="doc_files/image022.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 22</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>If we assigned
+chunkOverlap to 3 then we would see two <i>ing</i> in two chunks. By
+overlapping the chunks, we ensure that important patterns or events near the
+chunk boundaries </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>are captured
+and not discarded. By including overlapping segments, the algorithm can make
+better predictions or identify more nuanced patterns n the data.   </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1047 height=450 id="Picture 10"
+src="doc_files/image023.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 23</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>In our app
+we specified chunkSize to 1000 and chunkOverlap to 100. I want to emphasize that
+semantic analysis often relies on the context of words or phrases within a
+larger textual context. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>With smaller
+chunk sizes, there is a risk of losing the broader context in which the analyzed
+text appears. This can potentially lead to misinterpretations or incomplete
+understanding of the semantics, </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>especially when
+dealing with ambiguous or context-dependent language.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1049 height=566 id="Picture 11"
+src="doc_files/image024.jpg"><span style='font-size:12.0pt;line-height:107%'>                       </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 24</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>In our app
+we use Pinecone <a href="https://www.pinecone.io/" target="_blank">https://www.pinecone.io/</a>
+and what is it? </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Pinecone is
+a cloud-based vector database and indexing. It is closely associated with
+embeddings, as it designed to store, index and search high-dimensional vector
+embeddings efficiently.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=888 height=942 id="Picture 14"
+src="doc_files/image025.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 25</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>In the video
+you could see how I created an index in Pinecone.  From the app I can embed my
+documents specified in data folder. Pinecone allows you to create just one
+index if you use their free plan.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=773 height=333
+src="doc_files/image026.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 26</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>I specified
+Pinecone key, environment and index in the .env file.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=903 height=464
+src="doc_files/image027.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 27</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Note, that the
+Output Dimensions must be 1536.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=947 height=453
+src="doc_files/image028.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 28</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>If you go to
+OpenAI page you will see that number.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1098 height=578
+src="doc_files/image029.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 29</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>By the way,
+you can use various model providers. In our app we use OpenAIEmbeddings.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1142 height=619
+src="doc_files/image030.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 30</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>When you the
+app code you may notice that we do not provide OPENAI API KEY when connecting
+to OpenAI.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=773 height=221
+src="doc_files/image031.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 31</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>The reason
+is that when you specify OPENAI_API_KEY in the .env file it is automatically
+picked up in the code.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>This is all
+that we have in the app</span><span style='color:black'>'</span></span><span
+style='font-size:12.0pt;line-height:107%'>s embed.ts file to save our data in
+the vector store.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1048 height=621
+src="doc_files/image032.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 32</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>When a user asks
+a question then the request is redirected to getAnswer function and we connect
+to Pinecone vector store using the index.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=935 height=694 id="Picture 15"
+src="doc_files/image033.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 33</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>I temporarily
+included VectorDBQAChain to discuss something which will not be in the final
+implementation.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>VectorDBQAChain
+is going to be deprecated in the next couple of months. It has super elegant
+replacer called RetrievalQAChain which we have used in our application.  </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>The problem
+of VectorDBQAChain that it was deprecated is that they want to support more
+methods besides semantic similarity search. Let</span><span style='color:black'>'</span></span><span
+style='font-size:12.0pt;line-height:107%'>s review VectorDBQAChain. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>This is very
+cool chain because it does lots of things.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1036 height=575 id="Picture 16"
+src="doc_files/image034.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 34</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>What this
+chain does is takes the query, the prompt, embeds it as a vector, then takes
+couple of vectors which are closest to the query vector semantically then
+returns it. </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>The chain is
+going to take those vectors, translate them back into chunks, and those are the
+context which we are going to pass to the modified prompt. So, the new prompt </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>will be the
+original one plus the relevant chunks. We say, hey, listen we have this prompt and
+we know that those texts are very important and they probably have the answer
+for this prompt.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Please do
+your magic and use them as your context. You see that out question or prompt is
+<i>Armenia is home to the oldest winery?</i> </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>The response
+is <i>Yes, Armenia is home to the world</i></span><span style='color:black'>'</span></span><i><span
+style='font-size:12.0pt;line-height:107%'>s oldest …</span></i><span
+style='font-size:12.0pt;line-height:107%'> PageContent is the relevant chunk
+(context) that we pass with the question to the LLM.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1060 height=600 id="Picture 17"
+src="doc_files/image035.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 35</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>In the app
+we use ConversationalRetrievalQAChain instead of VectorDBQAChain and use
+retriever.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>What it the retriever?
+It is simply a wrapper around vector store which helps us go and retrieve with
+the similarity search and turn every vector store into retriever class by using
+asRetriever() </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>function
+which simply takes the Vector store and wraps it in the retriever class. We
+also retrieve source documents returnSourceDocuments based on the checkbox so
+we can </span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>return the
+actual documentations.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=739 height=301 id="Picture 18"
+src="doc_files/image036.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 36</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>We ask a
+question.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=698 height=373 id="Picture 19"
+src="doc_files/image037.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 37</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>We get a
+response.</span></p>
+
+<p class=MsoNormal><img border=0 width=744 height=473 id="Picture 20"
+src="doc_files/image038.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 38</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Then we ask
+is it good? meaning food.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=876 height=567 id="Picture 21"
+src="doc_files/image039.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 39</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>It understood
+it.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=975 height=709 id="Picture 22"
+src="doc_files/image040.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 40</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>The reason
+is that we keep chat history and pass it to the chain. Chat history is a
+question plus the response. This way it understands the context.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=836 height=634 id="Picture 23"
+src="doc_files/image041.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 41</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Let</span><span
+style='color:black'>'</span></span><span style='font-size:12.0pt;line-height:
+107%'>s comment the line and do not keep the history.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=787 height=534 id="Picture 24"
+src="doc_files/image042.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Figure 42</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>Now. When we
+ask the same question then it cannot answer as it does not know the context.</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
