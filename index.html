@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>REST API Example</title>
+  <title>Documentation Helper</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
   <style>
@@ -45,7 +45,7 @@
 <body>
   <div class="container">
     <div>
-      <div class="header">Document Helper</div>
+      <div class="header">Documentation Helper</div>
       <div id="wait"></div>
       <div>
         <input id="question" type="text" placeholder="Ask a question (hit Enter)" />
@@ -67,7 +67,6 @@
       function getData(data) {
         $("#wait").text("Wait...")
 
-        console.log(data)
         $.ajax({
           type: 'POST',
           url: '/api/data',

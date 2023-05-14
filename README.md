@@ -24,7 +24,7 @@ To get started.
          npm run embed
          
        # to run locally
-        npm start
+         npm start
       
 ```
 
