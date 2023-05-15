@@ -27,7 +27,7 @@ if (
 
     const index = client.Index(process.env.PINECONE_INDEX);
 
-    const loader = new UnstructuredDirectoryLoader(path.join(__dirname+'/data'), {})
+    const loader = new UnstructuredDirectoryLoader(path.join(__dirname, 'data'), {})
 
     const documents = await loader.loadAndSplit(
         new RecursiveCharacterTextSplitter({
