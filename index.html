@@ -100,8 +100,7 @@
           },
           error: function(xhr, status, error) {
             $("#wait").text("")
-            console.error(error);
-            alert(error.message || error)
+            alert(error)
           }
         });
       }

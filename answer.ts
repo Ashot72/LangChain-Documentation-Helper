@@ -14,27 +14,34 @@ client.init({
 })
 
 export const getAnswer = async (req, res) => {
-    const data = req.body;
+    try {
+        const data = req.body;
+        
+        const {  question, source } = data   
+
+        const pineconeIndex = client.Index(process.env.PINECONE_INDEX!)
+
+        const vectorStore = await PineconeStore.fromExistingIndex(
+            new OpenAIEmbeddings(),
+            { pineconeIndex }
+        )
+
+        const model = new OpenAI({temperature: 0})
+        const chain = ConversationalRetrievalQAChain.fromLLM(
+            model, 
+            vectorStore.asRetriever(),
+            { returnSourceDocuments: JSON.parse(source)})
+
+        const chat = store.get('chat')
+        const response = await chain.call({ question, chat_history: chat ? chat.history : []})
     
-    const {  question, source } = data   
-
-    const pineconeIndex = client.Index(process.env.PINECONE_INDEX!)
-
-    const vectorStore = await PineconeStore.fromExistingIndex(
-        new OpenAIEmbeddings(),
-        { pineconeIndex }
-    )
-
-    const model = new OpenAI({temperature: 0})
-    const chain = ConversationalRetrievalQAChain.fromLLM(
-        model, 
-        vectorStore.asRetriever(),
-        { returnSourceDocuments: JSON.parse(source)})
-
-    const chat = store.get('chat')
-    const response = await chain.call({ question, chat_history: chat ? chat.history : []})
-  
-    store.set('chat', { history: question + response.text })
- 
-    res.json({ data: response })
+        store.set('chat', { history: question + response.text })
+    
+        res.json({ data: response })
+    } catch(error) {
+        console.log({error})
+        res
+        .status(500)
+        .json({ message: "Something went wrong." })
+    }
 }

@@ -43,9 +43,9 @@ if (
         new OpenAIEmbeddings(),
         { pineconeIndex: index }
       );
-    }catch(error) {
+   } catch(error) {
         console.log({error})
-    }
+   }
 
   console.log("Added to Pinecore vectorestore vectors")
 }
